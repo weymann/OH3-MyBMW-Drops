@@ -14,7 +14,7 @@ The provided data depends on
 1. the [Thing Type](#things) and 
 2. the [Properties](#properties) mentioned in Services
 
-Different channel groups are clustering all informations.
+Different channel groups are clustering all information.
 Check for each group if it's supported by your vehicle.
 
 Please note **this isn't a real-time binding**. 
@@ -49,7 +49,7 @@ For hybrid vehicles in addition to _Fuel and Electric Range_ the _Hybrid Range_ 
  
 #### Properties
 
-<img align="right" src="./doc/vehicle-properties.png" width="500" height="225"/>
+<img align="right" src="./doc/vehicle-properties.png" width="500" height="350"/>
 
 For each vehicle properties are available. 
 Basic information is given regarding
@@ -122,7 +122,7 @@ Same configuration is needed for all things
 | vehicleBrand    | text    | Vehicle Brand like BMW or Mini    |
 
 The _vehicleBrand_ is automatically obtained by the discovery service and shall not be changed.
-If thing is defined manually via *.things file following brands are suppoerted
+If thing is defined manually via *.things file following brands are supported
 
 * BMW
 * MINI
@@ -268,7 +268,7 @@ Possible states
 
 #### Check Control
 
-Group for all current active CheckControl messages.
+Group for all current active Check Control messages.
 If more than one message is active the channel _name_ contains all active messages as options.
 
 * Channel Group ID is **check**
@@ -277,8 +277,8 @@ If more than one message is active the channel _name_ contains all active messag
 
 | Channel Label                   | Channel ID          | Type           | Access     |
 |---------------------------------|---------------------|----------------|------------|
-| CheckControl Description        | name                | String         | Read/Write |
-| CheckControl Details            | details             | String         | Read       |
+| Check Control Description       | name                | String         | Read/Write |
+| Check Control Details           | details             | String         | Read       |
 | Severity Level                  | severity            | String         | Read       |
 
 Severity Levels
@@ -460,7 +460,7 @@ Image representation of the vehicle.
 | Rendered Vehicle Image     | png                 | Image  | Read     |
 | Image Viewport             | view                | String | Write    |
 
-Possible Viewports:
+Possible view ports:
 
 * _VehicleStatus_ Front Side View
 * _VehicleInfo_ Front View
@@ -491,11 +491,11 @@ BMW has a high range of vehicles supported by their API.
 In case of any issues with this binding help to resolve it! 
 Please perform the following steps:
 
-* Can you [log into MyBMW App](https://www.bmw-connecteddrive.com/country-region-select/country-region-selection.html) with your credentials? 
+* Can you log into MyBMW App with your credentials? 
 * Is the vehicle listed in your account? 
 * Is the [MyBMW Brige](#bridge) status _Online_?
 
-If these pre-conditions are fulfilled proceed with the fingerprint generation. 
+If these preconditions are fulfilled proceed with the fingerprint generation. 
 
 #### Generate Debug Fingerprint
 
@@ -552,8 +552,8 @@ Especially for electric vehicles it depends on many factors like driving style a
 The example is based on a BMW i3 with range extender (REX). 
 Exchange the three configuration parameters in the Things section
 
-* YOUR_USERNAME - with your ConnectedDrive login username
-* YOUR_PASSWORD - with your ConnectedDrive password credentials
+* YOUR_USERNAME - with your MyBMW login username
+* YOUR_PASSWORD - with your MyBMW password credentials
 * VEHICLE_VIN - the vehicle identification number
 
 In addition search for all occurrences of *i3* and replace it with your Vehicle Identification like *x3* or *535d* and you're ready to go!
