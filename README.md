@@ -211,8 +211,6 @@ Examples
 
 ##### Vehicle Status Raw Data
 
-<img align="right" src="./doc/RawData.png" width="400" height="125"/>
-
 The _raw data channel_ is marked as _advanced_ and isn't shown by default.
 It targets towards advanced users to derive even more data out of BMW API replies.
 As the replies are formatted as JSON use the [JsonPath Transformation Service](https://www.openhab.org/addons/transformations/jsonpath/) to extract data for an item,   
@@ -220,6 +218,8 @@ As the replies are formatted as JSON use the [JsonPath Transformation Service](h
 | Channel Label             | Channel ID          | Type          | Description                                    |
 |---------------------------|---------------------|---------------|------------------------------------------------|
 | Raw Data                  | raw                 | String        | Unfiltered JSON String of vehicle data         |
+
+<img align="right" src="./doc/RawData.png" width="400" height="125"/>
 
 Examples:
 
