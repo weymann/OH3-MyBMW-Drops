@@ -212,7 +212,7 @@ Examples
 ##### Vehicle Status Raw Data
 
 The _raw data channel_ is marked as _advanced_ and isn't shown by default.
-It targets towards advanced users to derive even more data out of BMW API replies.
+Target are advanced users to derive even more data out of BMW API replies.
 As the replies are formatted as JSON use the [JsonPath Transformation Service](https://www.openhab.org/addons/transformations/jsonpath/) to extract data for an item,   
 
 | Channel Label             | Channel ID          | Type          | Description                                    |
