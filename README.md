@@ -172,6 +172,7 @@ Reflects overall status of the vehicle.
 | Plug Connection Status    | plug-connection     | String        | Plug is _Connected_ or _Not connected_         |      |  X   |    X    |  X  |
 | Charging Status           | charge              | String        | Current charging status                        |      |  X   |    X    |  X  |
 | Charging Information      | charge-info         | String        | Information regarding current charging session |      |  X   |    X    |  X  |
+| Motion Status             | motion              | Switch        | Driving state - depends on vehicle hardware    |  X   |  X   |    X    |  X  |
 | Last Status Timestamp     | last-update         | DateTime      | Date and time of last status update            |  X   |  X   |    X    |  X  |
 
 Overall Door Status values
@@ -326,7 +327,7 @@ If more than one service is scheduled in the future the channel _name_ contains 
 |--------------------------------|---------------------|----------------|------------|
 | Service Name                   | name                | String         | Read/Write |
 | Service Details                | details             | String         | Read       |
-| Service Date                   | date                | Number         | Read       |
+| Service Date                   | date                | DateTime       | Read       |
 | Mileage till Service           | mileage             | Number:Length  | Read       |
 
 
@@ -338,11 +339,12 @@ GPS location and heading of the vehicle.
 * Available for all vehicles with built-in GPS sensor. Function can be enabled/disabled in the head unit
 * Read-only values
 
-| Channel Label   | Channel ID          | Type         | 
-|-----------------|---------------------|--------------|
-| GPS Coordinates | gps                 | Location     | 
-| Heading         | heading             | Number:Angle | 
-
+| Channel Label       | Channel ID          | Type          | 
+|---------------------|---------------------|---------------|
+| GPS Coordinates     | gps                 | Location      | 
+| Heading             | heading             | Number:Angle  | 
+| Address             | address             | String        | 
+| Distance from Home  | home-distance       | Number:Length | 
 
 #### Remote Services
 
@@ -534,14 +536,7 @@ log:set DEBUG org.openhab.binding.mybmw
 ```
 
 The debug fingerprint is generated every time the discovery is executed.
-To force a new fingerprint perform the following steps in the UI
-
-1) Go to settings
-2) Select Things entry
-3) Press "+" sign bottom right
-4) Choose the _MyBMW_ binding
-5) Press the _Scan_ button on top
-
+To force a new fingerprint perform a _Scan_ for MyBMW things.
 Personal data is eliminated from the log entries so it should be possible to share them in public.
 Data like
 
